@@ -27,8 +27,142 @@
 
   There are 12 files with the naming convention of YYYYMM-divvy-tripdata and each file includes information for one month. Each file has 13 columns; ride_id, rideable_type, started_at, ended_at, start_station_name, end_station_id, start_lat, start_lng, end_lat, end_lng, member_casual. 
 
+## Process
+
+1. Union Tables
+
+```sql
+  CREATE TABLE upheld-rain-403114.bike_trips.data_23_24 AS 
+SELECT *
+FROM `upheld-rain-403114.bike_trips.Sep_23` 
+UNION ALL
+SELECT *
+FROM `upheld-rain-403114.bike_trips.oct_23` 
+UNION ALL
+SELECT *
+FROM `upheld-rain-403114.bike_trips.nov_23` 
+UNION ALL
+SELECT *
+FROM `upheld-rain-403114.bike_trips.dec_23` 
+UNION ALL
+SELECT *
+FROM `upheld-rain-403114.bike_trips.jan_24` 
+UNION ALL
+SELECT *
+FROM `upheld-rain-403114.bike_trips.feb_24` 
+UNION ALL
+SELECT *
+FROM `upheld-rain-403114.bike_trips.mar_24` 
+UNION ALL
+SELECT *
+FROM `upheld-rain-403114.bike_trips.apr_24` 
+UNION ALL
+SELECT *
+FROM `upheld-rain-403114.bike_trips.may_24` 
+UNION ALL
+SELECT *
+FROM `upheld-rain-403114.bike_trips.jun_24` 
+UNION ALL
+SELECT *
+FROM `upheld-rain-403114.bike_trips.jul_24` 
+UNION ALL
+SELECT *
+FROM `upheld-rain-403114.bike_trips.aug_24`
+```
+
+### 2. Check for Null Values
+
+```sql
+ SELECT
+  SUM(CASE WHEN ride_id IS NULL THEN 1 ELSE 0 END) AS rideid_null_count,
+  SUM(CASE WHEN  rideable_type IS NULL THEN 1 ELSE 0 END) AS ridetype_null_count,
+  SUM(CASE WHEN  member_casual IS NULL THEN 1 ELSE 0 END) AS mc_null_count,
+  SUM(CASE WHEN  started_at IS NULL THEN 1 ELSE 0 END) AS start_null_count, 
+  SUM(CASE WHEN  ended_at IS NULL THEN 1 ELSE 0 END) AS end_count,
+  SUM(CASE WHEN  start_station_name IS NULL THEN 1 ELSE 0 END) AS station_null_count
+
+FROM `upheld-rain-.bike_trips.c_data_23_24`
+```
+
+  - 968674 null values in start_station_name column
+  - data missing from september
+
+### 3. Delete Duplicates
+ 
+  Check for Duplicates 
+```sql
+SELECT 
+count(ride_id),
+count(distinct ride_id) 
+FROM `upheld-rain-403114.bike_trips.data_23_24`
+```
+
+  Delete Duplicates 
   
-  
+```sql
+CREATE OR REPLACE TABLE upheld-rain-403114.bike_trips.data_23_24 AS
+WITH RankedRows AS (
+  SELECT
+    *,
+    ROW_NUMBER() OVER (PARTITION BY ride_id ORDER BY ride_id) AS row_num
+  FROM
+    upheld-rain-403114.bike_trips.data_23_24
+)
+SELECT
+  *
+FROM
+  RankedRows
+WHERE
+  row_num = 1;
+```
+
+### 4. Create Tables
+
+  Add New Columns 
+```sql
+SELECT
+  *,
+  timestamp_diff(ended_at, started_at, MINUTE) as length,
+  format_timestamp('%m', started_at) AS month,
+  format_timestamp('%A', started_at) AS day_of_week,
+  format_timestamp('%H', started_at) AS hour
+FROM `upheld-rain-403114.bike_trips.data_23_24` 
+WHERE
+  timestamp_diff(ended_at, started_at, MINUTE)>=0
+/*
+- add new columns; length of ride, month, day of week, hour
+- delete negative rows from length of ride
+*?
+```
+
+
+  Add New Columns, Agregate by Start Station 
+```sql
+SELECT 
+    start_station_name,
+    count(ride_id) AS rides,
+    countif(member_casual = 'member') as member, 
+    countif(member_casual = 'casual') AS casual,
+    round(countif(member_casual = 'member') / count(ride_id)*100)  as member_percent,
+    round(countif(member_casual = 'casual') / count(ride_id)*100) as casual_percent,
+    countif(member_casual = 'casual') - countif(member_casual = 'member') as diff
+
+FROM `upheld-rain-403114.bike_trips.c_data_23_24`
+group by start_station_name
+order by diff desc
+
+/*
+  - for each station count ride; total, member, and casual
+  - add new columns; percent member, percent casual, causal member difference
+*/
+```
+
+### 5. Save Results
+
+
+## Analyize 
+
+
 
 
 
