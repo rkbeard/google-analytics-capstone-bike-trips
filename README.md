@@ -29,7 +29,7 @@
 
 ## Process
 
-1. Union Tables
+### 1. Union Tables
 
 ```sql
   CREATE TABLE upheld-rain-403114.bike_trips.data_23_24 AS 
@@ -164,6 +164,12 @@ order by diff desc
 
 ## Analyize 
 
+## Share 
+
+![mc_dash](https://github.com/user-attachments/assets/0bc6c39f-544e-44ba-89b1-d85ae6d6d910)
+
+
+![len_dash](https://github.com/user-attachments/assets/374d683b-f410-47e8-a949-996b4ecbd88a)
 
 
 
