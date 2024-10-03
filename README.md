@@ -96,6 +96,7 @@ count(ride_id),
 count(distinct ride_id) 
 FROM `upheld-rain-403114.bike_trips.data_23_24`
 ```
+* Found 211 Duplicates 
 
   Delete Duplicates 
   
@@ -114,6 +115,7 @@ FROM
   RankedRows
 WHERE
   row_num = 1;
+-- keeps only the first instance of each ride_id
 ```
 
 ### 4. Create Tables
@@ -132,11 +134,11 @@ WHERE
 /*
 - add new columns; length of ride, month, day of week, hour
 - delete negative rows from length of ride
-*?
+*/
 ```
 
 
-  Add New Columns, Agregate by Start Station 
+  Add New Columns, Aggregate by Start Station 
 ```sql
 SELECT 
     start_station_name,
@@ -161,6 +163,7 @@ order by diff desc
 
 
 ## Analyize 
+
 
 
 
