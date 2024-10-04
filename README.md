@@ -3,12 +3,12 @@
 ## Senario 
   You are a junior data analyst working on the marketing analyst team at Cyclistic, a bike-share companyinChicago. The director of marketing believes the company’s future success depends on maximizing the number of annual memberships. Therefore, your team wants to understand how casual riders and annual members use Cyclistic bikes differently. From these insights, your team will design a new marketing strategy to convert casual riders into annual members. But first, Cyclistic executives must approve your recommendations, so they must be backed up with compelling data insights and professional data visualizations.You are a junior data analyst working on the marketing analyst team at Cyclistic, a bike-share company in Chicago. 
 
-### Bussiness Task 
+### Business Task 
   Design marketing strategies aimed at converting casual riders into annual members.
 
 ### Key Information 
 -  The program has 5,824 bicycles that are geotracked and locked into a network of 692 stations across Chicago. The bikes can be unlocked from one station and returned to any other station in the system anytime.
-- Pricing plans: single-ride passes, full l-day passes, and annual memberships. Customers whopurchase single-ride or ful-day passes are referred to as casual riders. Customers whopurchase annual memberships are Cyclistic members.
+- Pricing plans: single-ride passes, full l-day passes, and annual memberships. Customers who purchase single-ride or full-day passes are referred to as casual riders. Customers who purchase annual memberships are Cyclistic members.
 - Cyclistic’s finance analysts have concluded that annual members are much more profitable than casual riders.  Maximizing the number of annual members will be key to future growth.
 
 
@@ -162,13 +162,13 @@ order by diff desc
 ### 5. Save Results
 
 
-## Analyize 
+## Analyze 
 
-Analyzized data using Tableau Public
+Analyzed data using Tableau Public
 
 ![mc_month](https://github.com/user-attachments/assets/a48b95f8-681d-4b24-8ee9-854b287b7f7a)
 - Number of rides are highest during summer months, and lowest during winter months
-- Number of rides likley correlate with temperature and daylight hours
+- Number of rides likely correlate with temperature and daylight hours
 
 
 ![mc_day](https://github.com/user-attachments/assets/5ffff2e2-f3d5-44d8-ab9a-1d08653c655a)
@@ -182,11 +182,11 @@ Analyzized data using Tableau Public
 
 
 ![mc_total_30_60](https://github.com/user-attachments/assets/39f91961-afa2-4d4d-9a1d-f998167b471d)
-- Members are more likley to take rides under 30 minutes, while casual riders are more likely to take rides over 30 minutes.
+- Members are more likely to take rides under 30 minutes, while casual riders are more likely to take rides over 30 minutes.
 
 
 ![mc_type](https://github.com/user-attachments/assets/01a02c19-b526-4704-8b05-c084e6419a52)
-- Casual and member rides both each ridable type very similarly
+- Casual and member rides both each rideable type very similarly
 
 
 ![len_day](https://github.com/user-attachments/assets/e13fb4e6-e3c4-42c3-94ba-63fa1dab8692)
@@ -194,9 +194,9 @@ Analyzized data using Tableau Public
 
 
 ![difference](https://github.com/user-attachments/assets/8e2f9b83-e6b3-4db8-a639-d4498c499dda)
-- Top station discrepency between casual and member use shows potential for conversion growth where casual members already using the service frequently.
+- Top station discrepancy between casual and member use shows potential for conversion growth where casual members are already using the service frequently.
 - Knowing stations dominated by causal riders can allow you to create focused marketing and membership incentives
-- Understating usage patterens like tourist spots can help targeted marketing efforts 
+- Understating usage patterns like tourist spots can help targeted marketing efforts 
 
 
 ## Share 
