@@ -168,7 +168,7 @@ Analyzed data using Tableau Public
 
 ![mc_month](https://github.com/user-attachments/assets/a48b95f8-681d-4b24-8ee9-854b287b7f7a)
 - Number of rides are highest during summer months, and lowest during winter months
-- Number of rides likely correlate with temperature and daylight hours
+- Number of rides likely correlate with factors such as temperature and daylight hours
 
 
 ![mc_day](https://github.com/user-attachments/assets/5ffff2e2-f3d5-44d8-ab9a-1d08653c655a)
