@@ -1,4 +1,4 @@
-# Case Study - Cyclistic Bike Share, Google Analytics Capstone Project
+# Case Study - Cyclistic Bike Share, Google Data Analytics Capstone Project
 
 ## Senario 
   You are a junior data analyst working on the marketing analyst team at Cyclistic, a bike-share companyinChicago. The director of marketing believes the company’s future success depends on maximizing the number of annual memberships. Therefore, your team wants to understand how casual riders and annual members use Cyclistic bikes differently. From these insights, your team will design a new marketing strategy to convert casual riders into annual members. But first, Cyclistic executives must approve your recommendations, so they must be backed up with compelling data insights and professional data visualizations.You are a junior data analyst working on the marketing analyst team at Cyclistic, a bike-share company in Chicago. 
@@ -163,6 +163,41 @@ order by diff desc
 
 
 ## Analyize 
+
+Analyzized data using Tableau Public
+
+![mc_month](https://github.com/user-attachments/assets/a48b95f8-681d-4b24-8ee9-854b287b7f7a)
+- Number of rides are highest during summer months, and lowest during winter months
+- Number of rides likley correlate with temperature and daylight hours
+
+
+![mc_day](https://github.com/user-attachments/assets/5ffff2e2-f3d5-44d8-ab9a-1d08653c655a)
+- Casual rides increase on the weekends
+- Member rides increase on weekdays
+
+
+![mc_hour](https://github.com/user-attachments/assets/5c9a10ce-d4a8-4735-a9cc-e634f43a1ea5)
+- Members ride most during commuting hours
+- Causal rides peak at 5:00 PM
+
+
+![mc_total_30_60](https://github.com/user-attachments/assets/39f91961-afa2-4d4d-9a1d-f998167b471d)
+- Members are more likley to take rides under 30 minutes, while casual riders are more likely to take rides over 30 minutes.
+
+
+![mc_type](https://github.com/user-attachments/assets/01a02c19-b526-4704-8b05-c084e6419a52)
+- Casual and member rides both each ridable type very similarly
+
+
+![len_day](https://github.com/user-attachments/assets/e13fb4e6-e3c4-42c3-94ba-63fa1dab8692)
+- Casual riders on average ride longer on the weekends
+
+
+![difference](https://github.com/user-attachments/assets/8e2f9b83-e6b3-4db8-a639-d4498c499dda)
+- Top station discrepency between casual and member use shows potential for conversion growth where casual members already using the service frequently.
+- Knowing stations dominated by causal riders can allow you to create focused marketing and membership incentives
+- Understating usage patterens like tourist spots can help targeted marketing efforts 
+
 
 ## Share 
 
