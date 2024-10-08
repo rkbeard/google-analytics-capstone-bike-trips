@@ -207,7 +207,7 @@ Analyzed data using Tableau Public
 ![len_dash](https://github.com/user-attachments/assets/374d683b-f410-47e8-a949-996b4ecbd88a)
 
 1. Rides are highest during summer months, and lowest in winter, suggesting a strong correlation between environmental factors such as temperature and daylight. Members tend to ride during commuting hours on weekdays, while casual riders ride more frequently during weekends and peaks at 5:00 PM. Targeted incentives during peak casual rider times or seasonal promotions, offering discounts or free trials.  This can help engage customers with the service when they are most likely to be using it.
-2. There is a notable difference in casual and member usage of certain stations. This presents opportunities for converting casual rides to members. Focus marketing at highly frequented causal rider stations such as tourist spots, recreation areas, and popular destinations.
+2. There is a notable difference in casual and member usage of certain stations. This presents opportunities for converting casual rides to members by focusing marketing at highly frequented causal rider stations such as tourist spots, recreation areas, and popular destinations.
 3. Members tend to take shorter rides, under thirty minutes, while casuals tend to take longer rides and more on the weekends. Providing various membership plans such as during leisure hours, on weekends, or seasonally, that cater to the needs of casual riders can help promote engagement with the service. 
 
 
